@@ -1,0 +1,139 @@
+import { useState, useEffect } from "react";
+import Layout from "@/components/layout/Layout";
+
+// Placeholder client data - replace with actual logos
+const clientsData = Array(24).fill(null).map((_, i) => ({
+  id: i + 1,
+  name: `Client ${i + 1}`,
+  logo: `[CLIENT LOGO ${i + 1}]`,
+}));
+
+const Clients = () => {
+  const [visibleClients, setVisibleClients] = useState<number[]>([]);
+
+  useEffect(() => {
+    // Stagger the animation of clients appearing
+    clientsData.forEach((_, index) => {
+      setTimeout(() => {
+        setVisibleClients((prev) => [...prev, index]);
+      }, index * 100);
+    });
+  }, []);
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-accent/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Our Clients
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We're proud to have worked with over 300 businesses across diverse industries. 
+              Here are some of the companies that trust Fam Infomedia.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
+            <div>
+              <div className="text-4xl font-bold text-primary-foreground">300+</div>
+              <div className="text-sm text-primary-foreground/70 mt-1">Happy Clients</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-primary-foreground">2+</div>
+              <div className="text-sm text-primary-foreground/70 mt-1">Years of Trust</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-primary-foreground">95%</div>
+              <div className="text-sm text-primary-foreground/70 mt-1">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Trusted By Industry Leaders
+            </h2>
+            <p className="text-muted-foreground">
+              From startups to established enterprises, businesses choose Fam Infomedia 
+              for our expertise, reliability, and results-driven approach.
+            </p>
+          </div>
+
+          {/* Logo Grid with Umbrella Animation */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {clientsData.map((client, index) => (
+              <div
+                key={client.id}
+                className={`bg-card border border-border rounded-xl p-6 flex items-center justify-center h-28 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group ${
+                  visibleClients.includes(index) ? "animate-umbrella" : "opacity-0"
+                }`}
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="text-muted-foreground text-xs font-medium text-center group-hover:text-foreground transition-colors">
+                  {client.logo}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              What Our Clients Say
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-card border border-border rounded-xl p-6 space-y-4">
+                <p className="text-muted-foreground italic">
+                  "Fam Infomedia transformed our digital presence. Their expertise and 
+                  dedication to our success made all the difference."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-xs">
+                    [PHOTO]
+                  </div>
+                  <div>
+                    <div className="font-medium text-foreground text-sm">Client Name {i}</div>
+                    <div className="text-xs text-muted-foreground">Company {i}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Ready to Join Our Success Stories?
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Whether you're looking to learn digital marketing or grow your business, 
+            we're here to help you succeed.
+          </p>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Clients;
