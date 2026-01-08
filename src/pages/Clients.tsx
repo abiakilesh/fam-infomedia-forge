@@ -10,6 +10,16 @@ import yamahaShanmuga from "@/assets/clients/yamaha-shanmuga.jpg";
 import bestMotors from "@/assets/clients/best-motors.jpg";
 import bachflower from "@/assets/clients/bachflower.jpg";
 import dpCarz from "@/assets/clients/dp-carz.jpg";
+import sanifm from "@/assets/clients/sanifm.jpg";
+import skSilage from "@/assets/clients/sk-silage.jpg";
+import kokkarakko from "@/assets/clients/kokkarakko.jpg";
+import littleStarr from "@/assets/clients/little-starr.jpg";
+import drEdu from "@/assets/clients/dr-edu.jpg";
+import nila from "@/assets/clients/nila.jpg";
+import heliios from "@/assets/clients/heliios.jpg";
+import karthickBattery from "@/assets/clients/karthick-battery.jpg";
+import vjInterior from "@/assets/clients/vj-interior.jpg";
+import blessingPromoters from "@/assets/clients/blessing-promoters.jpg";
 
 const clientsData = [
   { id: 1, name: "Sri Sakthi Motors - Yamaha", logo: yamahaSakthi },
@@ -20,6 +30,16 @@ const clientsData = [
   { id: 6, name: "Best Motors - Yamaha", logo: bestMotors },
   { id: 7, name: "Bachflower Karpaga Anandhi", logo: bachflower },
   { id: 8, name: "DP Carz Studio", logo: dpCarz },
+  { id: 9, name: "SAN Institute of Facility Management", logo: sanifm },
+  { id: 10, name: "SK Silage Cattle Feed Manufacturing", logo: skSilage },
+  { id: 11, name: "The Kokkarakko Restaurant", logo: kokkarakko },
+  { id: 12, name: "Little Starr International School", logo: littleStarr },
+  { id: 13, name: "DR Edu Services", logo: drEdu },
+  { id: 14, name: "Nila Mobile & Laptop Service", logo: nila },
+  { id: 15, name: "Heliios", logo: heliios },
+  { id: 16, name: "Karthick Battery Center", logo: karthickBattery },
+  { id: 17, name: "VJ Interior & Decors", logo: vjInterior },
+  { id: 18, name: "Blessing Promoters", logo: blessingPromoters },
 ];
 
 const Clients = () => {
