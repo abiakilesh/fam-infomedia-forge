@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import famLogo from "@/assets/fam-logo.png";
 
 const navItems = [
   { name: "About", path: "/about" },
@@ -22,13 +23,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">F</span>
-            </div>
-            <span className="font-display font-semibold text-lg text-foreground">
-              Fam Infomedia
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={famLogo} 
+              alt="Fam Infomedia" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
