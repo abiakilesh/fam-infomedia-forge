@@ -20,6 +20,15 @@ import heliios from "@/assets/clients/heliios.jpg";
 import karthickBattery from "@/assets/clients/karthick-battery.jpg";
 import vjInterior from "@/assets/clients/vj-interior.jpg";
 import blessingPromoters from "@/assets/clients/blessing-promoters.jpg";
+import kodaiElliott from "@/assets/clients/kodai-elliott.jpg";
+import naturals from "@/assets/clients/naturals.jpg";
+import rkOutfit from "@/assets/clients/rk-outfit.jpg";
+import subiCycleWorld from "@/assets/clients/subi-cycle-world.jpg";
+import grandPicklers from "@/assets/clients/grand-picklers.jpg";
+import smp from "@/assets/clients/smp.jpg";
+import layasCakes from "@/assets/clients/layas-cakes.jpg";
+import chinnaVeedu from "@/assets/clients/chinna-veedu.jpg";
+import ganeshConstruction from "@/assets/clients/ganesh-construction.jpg";
 
 const clientsData = [
   { id: 1, name: "Sri Sakthi Motors - Yamaha", logo: yamahaSakthi },
@@ -40,6 +49,15 @@ const clientsData = [
   { id: 16, name: "Karthick Battery Center", logo: karthickBattery },
   { id: 17, name: "VJ Interior & Decors", logo: vjInterior },
   { id: 18, name: "Blessing Promoters", logo: blessingPromoters },
+  { id: 19, name: "Kodai Elliott", logo: kodaiElliott },
+  { id: 20, name: "Naturals Salon", logo: naturals },
+  { id: 21, name: "RK Outfit", logo: rkOutfit },
+  { id: 22, name: "Subi Cycle World", logo: subiCycleWorld },
+  { id: 23, name: "Grand Picklers", logo: grandPicklers },
+  { id: 24, name: "SMP - Grown By Nature", logo: smp },
+  { id: 25, name: "Laya's Cakes & Candles", logo: layasCakes },
+  { id: 26, name: "Chinna Veedu Restaurant", logo: chinnaVeedu },
+  { id: 27, name: "Ganesh Construction & Interiors", logo: ganeshConstruction },
 ];
 
 const Clients = () => {
@@ -105,11 +123,11 @@ const Clients = () => {
           </div>
 
           {/* Logo Grid with Umbrella Animation */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {clientsData.map((client, index) => (
               <div
                 key={client.id}
-                className={`bg-white rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-lg transition-all cursor-pointer group ${
+                className={`bg-white rounded-xl p-6 flex items-center justify-center h-44 hover:shadow-lg transition-all cursor-pointer group ${
                   visibleClients.includes(index) ? "animate-umbrella" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.05}s` }}
@@ -117,7 +135,7 @@ const Clients = () => {
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-h-24 max-w-full object-contain group-hover:scale-105 transition-transform"
+                  className="max-h-36 max-w-full object-contain group-hover:scale-105 transition-transform"
                 />
               </div>
             ))}
