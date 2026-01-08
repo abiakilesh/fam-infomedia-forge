@@ -1,12 +1,26 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 
-// Placeholder client data - replace with actual logos
-const clientsData = Array(24).fill(null).map((_, i) => ({
-  id: i + 1,
-  name: `Client ${i + 1}`,
-  logo: `[CLIENT LOGO ${i + 1}]`,
-}));
+// Import client logos
+import yamahaSakthi from "@/assets/clients/yamaha-sakthi.jpg";
+import nandhiBuilders from "@/assets/clients/nandhi-builders.jpg";
+import crescent from "@/assets/clients/crescent.jpg";
+import sulurCarDecors from "@/assets/clients/sulur-car-decors.jpg";
+import yamahaShanmuga from "@/assets/clients/yamaha-shanmuga.jpg";
+import bestMotors from "@/assets/clients/best-motors.jpg";
+import bachflower from "@/assets/clients/bachflower.jpg";
+import dpCarz from "@/assets/clients/dp-carz.jpg";
+
+const clientsData = [
+  { id: 1, name: "Sri Sakthi Motors - Yamaha", logo: yamahaSakthi },
+  { id: 2, name: "Nandhi Builders & Material Suppliers", logo: nandhiBuilders },
+  { id: 3, name: "Crescent Construction", logo: crescent },
+  { id: 4, name: "SPA Sulur Car Decors", logo: sulurCarDecors },
+  { id: 5, name: "Sri Shanmuga Motors - Yamaha", logo: yamahaShanmuga },
+  { id: 6, name: "Best Motors - Yamaha", logo: bestMotors },
+  { id: 7, name: "Bachflower Karpaga Anandhi", logo: bachflower },
+  { id: 8, name: "DP Carz Studio", logo: dpCarz },
+];
 
 const Clients = () => {
   const [visibleClients, setVisibleClients] = useState<number[]>([]);
@@ -23,7 +37,7 @@ const Clients = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-accent/20">
+      <section className="py-20 bg-gradient-to-br from-background via-card to-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -71,18 +85,20 @@ const Clients = () => {
           </div>
 
           {/* Logo Grid with Umbrella Animation */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {clientsData.map((client, index) => (
               <div
                 key={client.id}
-                className={`bg-card border border-border rounded-xl p-6 flex items-center justify-center h-28 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group ${
+                className={`bg-white rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-lg transition-all cursor-pointer group ${
                   visibleClients.includes(index) ? "animate-umbrella" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="text-muted-foreground text-xs font-medium text-center group-hover:text-foreground transition-colors">
-                  {client.logo}
-                </div>
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-h-24 max-w-full object-contain group-hover:scale-105 transition-transform"
+                />
               </div>
             ))}
           </div>

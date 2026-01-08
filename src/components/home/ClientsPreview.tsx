@@ -2,11 +2,26 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Placeholder client logos - replace with actual logos
-const clientLogos = Array(8).fill(null).map((_, i) => ({
-  id: i + 1,
-  name: `Client ${i + 1}`,
-}));
+// Import client logos
+import yamahaSakthi from "@/assets/clients/yamaha-sakthi.jpg";
+import nandhiBuilders from "@/assets/clients/nandhi-builders.jpg";
+import crescent from "@/assets/clients/crescent.jpg";
+import sulurCarDecors from "@/assets/clients/sulur-car-decors.jpg";
+import yamahaShanmuga from "@/assets/clients/yamaha-shanmuga.jpg";
+import bestMotors from "@/assets/clients/best-motors.jpg";
+import bachflower from "@/assets/clients/bachflower.jpg";
+import dpCarz from "@/assets/clients/dp-carz.jpg";
+
+const clientLogos = [
+  { id: 1, name: "Sri Sakthi Motors - Yamaha", logo: yamahaSakthi },
+  { id: 2, name: "Nandhi Builders", logo: nandhiBuilders },
+  { id: 3, name: "Crescent Construction", logo: crescent },
+  { id: 4, name: "Sulur Car Decors", logo: sulurCarDecors },
+  { id: 5, name: "Sri Shanmuga Motors - Yamaha", logo: yamahaShanmuga },
+  { id: 6, name: "Best Motors - Yamaha", logo: bestMotors },
+  { id: 7, name: "Bachflower Karpaga Anandhi", logo: bachflower },
+  { id: 8, name: "DP Carz Studio", logo: dpCarz },
+];
 
 const ClientsPreview = () => {
   return (
@@ -27,11 +42,13 @@ const ClientsPreview = () => {
           {clientLogos.map((client) => (
             <div
               key={client.id}
-              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+              className="bg-white rounded-lg p-6 flex items-center justify-center h-28 hover:shadow-lg transition-shadow"
             >
-              <div className="text-muted-foreground text-sm font-medium">
-                [CLIENT LOGO {client.id}]
-              </div>
+              <img 
+                src={client.logo} 
+                alt={client.name}
+                className="max-h-20 max-w-full object-contain"
+              />
             </div>
           ))}
         </div>
