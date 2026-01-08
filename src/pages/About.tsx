@@ -141,6 +141,107 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Milestone Journey */}
+      <section className="py-20 bg-gradient-to-br from-background via-secondary/10 to-primary/5">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-16">
+            Our Milestone Journey
+          </h2>
+          
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/30" />
+            
+            {/* Milestones */}
+            <div className="space-y-12">
+              {/* 2022 - Left */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-8 text-right">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2022</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Fam Infomedia was established in Goundampalayam
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2" />
+              </div>
+
+              {/* 2022 - Right */}
+              <div className="relative flex items-center">
+                <div className="w-1/2" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2 pl-8">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2022</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Our first cohort of 50 students graduated successfully
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 2023 - Left */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-8 text-right">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2023</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Team expanded to 20+ specialized marketing professionals
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2" />
+              </div>
+
+              {/* 2023 - Right */}
+              <div className="relative flex items-center">
+                <div className="w-1/2" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2 pl-8">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2023</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Reached the milestone of serving 100+ satisfied clients
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 2024 - Left */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-8 text-right">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2024</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Grown to a team of 30+ members serving 300+ clients
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2" />
+              </div>
+
+              {/* 2024 - Right */}
+              <div className="relative flex items-center">
+                <div className="w-1/2" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                <div className="w-1/2 pl-8">
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-primary mb-2">2024</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Recognized as a leading <span className="text-primary font-medium">digital education</span> provider in Tamil Nadu
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
