@@ -1,9 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import { Briefcase, Code, Palette, MapPin, Clock, Users } from "lucide-react";
+import { Briefcase, Code, Palette, MapPin, Clock, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-const WHATSAPP_NUMBER = "919655519922";
+const EMAIL_ADDRESS = "info@faminfomedia.com";
 
 const jobOpenings = [
   {
@@ -154,9 +154,10 @@ const jobOpenings = [
 
 const Career = () => {
   const handleApply = (jobTitle: string) => {
-    const message = `Hello! I'm interested in the ${jobTitle} position at Fam Infomedia. I would like to apply.`;
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
+    const subject = `Application for ${jobTitle} position at Fam Infomedia`;
+    const body = `Hello,\n\nI am interested in the ${jobTitle} position at Fam Infomedia.\n\nPlease find my resume attached.\n\nThank you.`;
+    const mailtoUrl = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
   };
 
   return (
