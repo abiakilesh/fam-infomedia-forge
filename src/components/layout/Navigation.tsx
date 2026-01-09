@@ -19,7 +19,7 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -40,7 +40,7 @@ const Navigation = () => {
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === item.path
                     ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
+                    : "text-white hover:bg-white/10"
                 }`}
               >
                 {item.name}
@@ -52,7 +52,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-white hover:bg-white/10"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -61,7 +61,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-white/10">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -71,7 +71,7 @@ const Navigation = () => {
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     location.pathname === item.path
                       ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-muted"
+                      : "text-white hover:bg-white/10"
                   }`}
                 >
                   {item.name}
