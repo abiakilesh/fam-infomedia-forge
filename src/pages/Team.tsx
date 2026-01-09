@@ -23,6 +23,12 @@ import kathirPhoto from "@/assets/team/kathir.png";
 import subhikshaPhoto from "@/assets/team/subhiksha.png";
 import santhiyaPhoto from "@/assets/team/santhiya.png";
 import priyaPhoto from "@/assets/team/priya.png";
+import vaishuPhoto from "@/assets/team/vaishu.png";
+import dharshanPhoto from "@/assets/team/dharshan.png";
+import gokulPhoto from "@/assets/team/gokul.png";
+import hemaPhoto from "@/assets/team/hema.png";
+import kishorePhoto from "@/assets/team/kishore.png";
+import manojPhoto from "@/assets/team/manoj.png";
 
 interface TeamMember {
   id: string;
@@ -68,7 +74,7 @@ const teamsData: Team[] = [
   },
   {
     id: "team-c",
-    name: "Team C - Creative Design",
+    name: "Design Team",
     description: "Creative designers crafting stunning visuals and brand identities.",
     members: [
       { id: "c1", name: "Akilesh", role: "Creative Lead", photo: akileshPhoto, linkedin: "#", twitter: "#", instagram: "#" },
@@ -76,6 +82,12 @@ const teamsData: Team[] = [
       { id: "c3", name: "Gayathri", role: "UI/UX Designer", photo: gayathriPhoto, linkedin: "#", twitter: "#" },
       { id: "c4", name: "Hari", role: "Motion Designer", photo: hariPhoto, linkedin: "#", instagram: "#" },
       { id: "c5", name: "Sharnitha", role: "Brand Designer", photo: sharnithaPhoto, linkedin: "#", twitter: "#" },
+      { id: "c6", name: "Vaishu", role: "Visual Designer", photo: vaishuPhoto, linkedin: "#", instagram: "#" },
+      { id: "c7", name: "Dharshan", role: "Graphic Designer", photo: dharshanPhoto, linkedin: "#", twitter: "#" },
+      { id: "c8", name: "Gokul", role: "UI Designer", photo: gokulPhoto, linkedin: "#", instagram: "#" },
+      { id: "c9", name: "Hema", role: "Brand Designer", photo: hemaPhoto, linkedin: "#", twitter: "#" },
+      { id: "c10", name: "Kishore", role: "Creative Designer", photo: kishorePhoto, linkedin: "#", instagram: "#" },
+      { id: "c11", name: "Manoj", role: "Art Director", photo: manojPhoto, linkedin: "#", twitter: "#", instagram: "#" },
     ],
   },
   {
@@ -123,7 +135,7 @@ const Team = () => {
       </section>
 
       {/* Teams Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="space-y-12 max-w-6xl mx-auto">
             {teamsData.map((team) => (
@@ -133,12 +145,12 @@ const Team = () => {
                   className="cursor-pointer group"
                   onClick={() => toggleTeam(team.id)}
                 >
-                  <Card className="bg-gray-50 hover:shadow-lg transition-all duration-300 border-gray-200">
+                  <Card className="bg-gray-800 hover:shadow-lg transition-all duration-300 border-gray-700">
                     <CardContent className="p-6">
-                      <h3 className="text-2xl font-bold text-charcoal mb-2">
+                      <h3 className="text-2xl font-bold text-white mb-2">
                         {team.name}
                       </h3>
-                      <p className="text-charcoal/70 mb-2">{team.description}</p>
+                      <p className="text-gray-300 mb-2">{team.description}</p>
                       <p className="text-sm text-primary font-medium">
                         {expandedTeam === team.id ? "Click to collapse" : "Click to view members →"}
                       </p>
@@ -155,7 +167,7 @@ const Team = () => {
                         className="animate-zoom-in"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        <Card className="overflow-hidden bg-white hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-gray-200">
+                        <Card className="overflow-hidden bg-gray-800 hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-gray-700">
                           <CardContent className="p-0">
                             {/* Member Photo */}
                             <div className="relative overflow-hidden">
@@ -168,15 +180,15 @@ const Team = () => {
                             
                             {/* Member Info */}
                             <div className="p-4 space-y-2 text-center">
-                              <h4 className="font-semibold text-charcoal text-lg">{member.name}</h4>
-                              <p className="text-sm text-charcoal/60">{member.role}</p>
+                              <h4 className="font-semibold text-white text-lg">{member.name}</h4>
+                              <p className="text-sm text-gray-400">{member.role}</p>
                               
                               {/* Social Links */}
                               <div className="flex justify-center gap-3 pt-2">
                                 {member.linkedin && (
                                   <a 
                                     href={member.linkedin} 
-                                    className="text-charcoal/50 hover:text-primary transition-colors"
+                                    className="text-gray-400 hover:text-primary transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                   >
                                     <Linkedin className="h-5 w-5" />
@@ -185,7 +197,7 @@ const Team = () => {
                                 {member.twitter && (
                                   <a 
                                     href={member.twitter} 
-                                    className="text-charcoal/50 hover:text-primary transition-colors"
+                                    className="text-gray-400 hover:text-primary transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                   >
                                     <Twitter className="h-5 w-5" />
@@ -194,7 +206,7 @@ const Team = () => {
                                 {member.instagram && (
                                   <a 
                                     href={member.instagram} 
-                                    className="text-charcoal/50 hover:text-primary transition-colors"
+                                    className="text-gray-400 hover:text-primary transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                   >
                                     <Instagram className="h-5 w-5" />
