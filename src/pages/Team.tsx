@@ -13,6 +13,16 @@ import santhoshPhoto from "@/assets/team/santhosh.png";
 import karthigaPhoto from "@/assets/team/karthiga.png";
 import keerthanaPhoto from "@/assets/team/keerthana.png";
 import lebinaPhoto from "@/assets/team/lebina.png";
+import akileshPhoto from "@/assets/team/akilesh.png";
+import bharathPhoto from "@/assets/team/bharath.png";
+import gayathriPhoto from "@/assets/team/gayathri.png";
+import hariPhoto from "@/assets/team/hari.png";
+import sharnithaPhoto from "@/assets/team/sharnitha.png";
+import naveenPhoto from "@/assets/team/naveen.png";
+import kathirPhoto from "@/assets/team/kathir.png";
+import subhikshaPhoto from "@/assets/team/subhiksha.png";
+import santhiyaPhoto from "@/assets/team/santhiya.png";
+import priyaPhoto from "@/assets/team/priya.png";
 
 interface TeamMember {
   id: string;
@@ -53,6 +63,37 @@ const teamsData: Team[] = [
       { id: "b2", name: "Karthiga", role: "Content Writer", photo: karthigaPhoto, linkedin: "#", instagram: "#" },
       { id: "b3", name: "Keerthana", role: "Content Strategist", photo: keerthanaPhoto, linkedin: "#" },
       { id: "b4", name: "Lebina", role: "SEO Specialist", photo: lebinaPhoto, linkedin: "#", twitter: "#" },
+      { id: "b5", name: "Priya", role: "Content Manager", photo: priyaPhoto, linkedin: "#", instagram: "#" },
+    ],
+  },
+  {
+    id: "team-c",
+    name: "Team C - Creative Design",
+    description: "Creative designers crafting stunning visuals and brand identities.",
+    members: [
+      { id: "c1", name: "Akilesh", role: "Creative Lead", photo: akileshPhoto, linkedin: "#", twitter: "#", instagram: "#" },
+      { id: "c2", name: "Bharath", role: "Graphic Designer", photo: bharathPhoto, linkedin: "#", instagram: "#" },
+      { id: "c3", name: "Gayathri", role: "UI/UX Designer", photo: gayathriPhoto, linkedin: "#", twitter: "#" },
+      { id: "c4", name: "Hari", role: "Motion Designer", photo: hariPhoto, linkedin: "#", instagram: "#" },
+      { id: "c5", name: "Sharnitha", role: "Brand Designer", photo: sharnithaPhoto, linkedin: "#", twitter: "#" },
+    ],
+  },
+  {
+    id: "team-d",
+    name: "Team D - Social Media",
+    description: "Social media experts managing engagement and community growth.",
+    members: [
+      { id: "d1", name: "Subhiksha", role: "Social Media Lead", photo: subhikshaPhoto, linkedin: "#", twitter: "#", instagram: "#" },
+      { id: "d2", name: "Santhiya", role: "Community Manager", photo: santhiyaPhoto, linkedin: "#", instagram: "#" },
+    ],
+  },
+  {
+    id: "team-e",
+    name: "Team E - Development",
+    description: "Technical experts building digital solutions and web applications.",
+    members: [
+      { id: "e1", name: "Naveen", role: "Tech Lead", photo: naveenPhoto, linkedin: "#", twitter: "#", instagram: "#" },
+      { id: "e2", name: "Kathir", role: "Full Stack Developer", photo: kathirPhoto, linkedin: "#", instagram: "#" },
     ],
   },
 ];
