@@ -75,13 +75,13 @@ const Clients = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-card to-muted">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Our Clients
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-black/70 leading-relaxed">
               We're proud to have worked with over 300 businesses across diverse industries. 
               Here are some of the companies that trust Fam Infomedia.
             </p>

@@ -76,13 +76,13 @@ const SpeakUsNow = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-accent/20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Let's Talk
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-black/70 leading-relaxed">
               Choose how you'd like to connect with us. Schedule a callback at your 
               convenience or message us instantly on WhatsApp.
             </p>

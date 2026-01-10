@@ -163,13 +163,13 @@ const Career = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-accent/20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Join Our Team
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-black/70 leading-relaxed">
               Be part of a growing team of 30+ professionals. We're looking for 
               passionate individuals who want to make an impact in digital marketing.
             </p>
