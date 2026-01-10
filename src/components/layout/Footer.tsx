@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, MapPinned } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,6 +18,23 @@ const Footer = () => {
               Empowering careers through comprehensive digital marketing education. 
               Join 300+ successful clients who trust us.
             </p>
+            <div className="flex items-center space-x-4 pt-2">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://business.google.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <MapPinned className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
