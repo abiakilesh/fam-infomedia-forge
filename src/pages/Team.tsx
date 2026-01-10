@@ -29,6 +29,14 @@ import gokulPhoto from "@/assets/team/gokul.png";
 import hemaPhoto from "@/assets/team/hema.png";
 import kishorePhoto from "@/assets/team/kishore.png";
 import manojPhoto from "@/assets/team/manoj.png";
+// Team F members
+import memberF1Photo from "@/assets/team/member-f1.png";
+import memberF2Photo from "@/assets/team/member-f2.png";
+import memberF3Photo from "@/assets/team/member-f3.png";
+import memberF4Photo from "@/assets/team/member-f4.png";
+import memberF5Photo from "@/assets/team/member-f5.png";
+import memberF6Photo from "@/assets/team/member-f6.png";
+import memberF7Photo from "@/assets/team/member-f7.png";
 
 interface TeamMember {
   id: string;
@@ -74,7 +82,7 @@ const teamsData: Team[] = [
   },
   {
     id: "team-c",
-    name: "Design Team",
+    name: "Team C - Design",
     description: "Creative designers crafting stunning visuals and brand identities.",
     members: [
       { id: "c1", name: "Akilesh", role: "Creative Lead", photo: akileshPhoto, linkedin: "#", twitter: "#", instagram: "#" },
@@ -106,6 +114,20 @@ const teamsData: Team[] = [
     members: [
       { id: "e1", name: "Naveen", role: "Tech Lead", photo: naveenPhoto, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "e2", name: "Kathir", role: "Full Stack Developer", photo: kathirPhoto, linkedin: "#", instagram: "#" },
+    ],
+  },
+  {
+    id: "team-f",
+    name: "Team F - Operations",
+    description: "Operations team ensuring smooth delivery and client success.",
+    members: [
+      { id: "f1", name: "Kavitha", role: "Operations Lead", photo: memberF1Photo, linkedin: "#", twitter: "#", instagram: "#" },
+      { id: "f2", name: "Ranjith", role: "Project Coordinator", photo: memberF2Photo, linkedin: "#", instagram: "#" },
+      { id: "f3", name: "Arun", role: "Client Success Manager", photo: memberF3Photo, linkedin: "#", twitter: "#" },
+      { id: "f4", name: "Divya", role: "Quality Analyst", photo: memberF4Photo, linkedin: "#", instagram: "#" },
+      { id: "f5", name: "Vijay", role: "Process Manager", photo: memberF5Photo, linkedin: "#", twitter: "#" },
+      { id: "f6", name: "Kiran", role: "Operations Executive", photo: memberF6Photo, linkedin: "#", instagram: "#" },
+      { id: "f7", name: "Surya", role: "Technical Support", photo: memberF7Photo, linkedin: "#", twitter: "#", instagram: "#" },
     ],
   },
 ];

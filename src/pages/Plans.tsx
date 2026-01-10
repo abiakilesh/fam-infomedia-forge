@@ -110,13 +110,13 @@ const Plans = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-accent/20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Choose Your Plan
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-black/70 leading-relaxed">
               Flexible pricing options designed to match your learning goals. 
               All plans include hands-on training and expert mentorship.
             </p>
@@ -137,13 +137,13 @@ const Plans = () => {
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {plans.map((plan, index) => (
               <Card 
                 key={index} 
-                className={`relative flex flex-col ${
+                className={`relative flex flex-col bg-white ${
                   plan.popular ? "border-primary shadow-lg scale-105" : ""
                 }`}
               >
@@ -154,14 +154,14 @@ const Plans = () => {
                 )}
                 
                 <CardHeader className="text-center pb-4">
-                  <div className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
+                  <div className="text-xs text-black/60 uppercase tracking-wide mb-2">
                     {plan.target}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
+                  <h3 className="text-xl font-bold text-black">{plan.name}</h3>
                   <div className="mt-4">
-                    <span className="text-3xl font-bold text-foreground">₹{plan.price}</span>
+                    <span className="text-3xl font-bold text-black">₹{plan.price}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
+                  <p className="text-sm text-black/70 mt-2">{plan.description}</p>
                 </CardHeader>
 
                 <CardContent className="flex-1 flex flex-col">
@@ -169,7 +169,7 @@ const Plans = () => {
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
                         <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <span className="text-black/70">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -188,10 +188,10 @@ const Plans = () => {
 
           {/* Additional Info */}
           <div className="mt-16 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-foreground mb-4">
+            <h3 className="text-xl font-semibold text-black mb-4">
               Not sure which plan is right for you?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-black/70 mb-6">
               Book a free consultation call and our team will help you choose the 
               perfect plan based on your goals and experience level.
             </p>
