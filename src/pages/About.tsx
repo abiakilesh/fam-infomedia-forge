@@ -1,9 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { Users, Target, Award, TrendingUp, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 // Import management team photos
-import manojPhoto from "@/assets/team/manoj.png";
+import head1Photo from "@/assets/team/head1.png";
+import head2Photo from "@/assets/team/head2.png";
+import head3Photo from "@/assets/team/head3.png";
+import teamlead1Photo from "@/assets/team/teamlead1.png";
+import teamlead2Photo from "@/assets/team/teamlead2.png";
+import gmPhoto from "@/assets/team/gm.png";
 
 const values = [
   {
@@ -30,9 +36,49 @@ const values = [
 
 const managementTeam = [
   {
-    name: "Manoj Kumar",
-    role: "Founder & CEO",
-    photo: manojPhoto,
+    name: "Priya",
+    role: "Head - Operations",
+    photo: head1Photo,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
+  },
+  {
+    name: "Divya",
+    role: "Head - Marketing",
+    photo: head2Photo,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
+  },
+  {
+    name: "Keerthana",
+    role: "Head - HR",
+    photo: head3Photo,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
+  },
+  {
+    name: "Karthik",
+    role: "Team Lead - Design",
+    photo: teamlead1Photo,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
+  },
+  {
+    name: "Santhiya",
+    role: "Team Lead - Content",
+    photo: teamlead2Photo,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
+  },
+  {
+    name: "Prasanth",
+    role: "General Manager",
+    photo: gmPhoto,
     instagram: "https://www.instagram.com/faminfomedia",
     twitter: "https://twitter.com/faminfomedia",
     linkedin: "https://www.linkedin.com/company/faminfomedia",
@@ -139,46 +185,46 @@ const About = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">Our Leadership</h2>
             <p className="text-black/70">
-              Meet the visionary behind Fam Infomedia's success.
+              Meet the talented leaders driving Fam Infomedia's success.
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {managementTeam.map((member, index) => (
-              <div key={index} className="text-center max-w-xs">
-                <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
+              <div key={index} className="text-center group">
+                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-xl transform scale-95">
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-black mb-1">{member.name}</h3>
-                <p className="text-primary font-medium mb-4">{member.role}</p>
-                <div className="flex justify-center gap-4">
+                <h3 className="text-lg font-bold text-black mb-1 transition-transform duration-300 group-hover:scale-105">{member.name}</h3>
+                <p className="text-primary font-medium mb-4 text-sm">{member.role}</p>
+                <div className="flex justify-center gap-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={member.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Instagram className="h-4 w-4" />
                   </a>
                   <a
                     href={member.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <Twitter className="h-4 w-4" />
                   </a>
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-4 w-4" />
                   </a>
                 </div>
               </div>
