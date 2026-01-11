@@ -1,15 +1,25 @@
 import Layout from "@/components/layout/Layout";
 import { Users, Target, Award, TrendingUp, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
 
 // Import management team photos
+import dineshPhoto from "@/assets/team/dinesh.png";
 import head1Photo from "@/assets/team/head1.png";
 import head2Photo from "@/assets/team/head2.png";
 import head3Photo from "@/assets/team/head3.png";
 import teamlead1Photo from "@/assets/team/teamlead1.png";
 import teamlead2Photo from "@/assets/team/teamlead2.png";
 import gmPhoto from "@/assets/team/gm.png";
+
+// Founder data
+const founder = {
+  name: "Dinesh Kumar",
+  role: "Founder & CEO",
+  photo: dineshPhoto,
+  instagram: "https://www.instagram.com/faminfomedia",
+  twitter: "https://twitter.com/faminfomedia",
+  linkedin: "https://www.linkedin.com/company/faminfomedia",
+};
 
 const values = [
   {
@@ -179,7 +189,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Management Team */}
+      {/* Leadership Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -189,6 +199,48 @@ const About = () => {
             </p>
           </div>
 
+          {/* Founder - Featured Section */}
+          <div className="max-w-md mx-auto mb-16">
+            <div className="text-center group">
+              <div className="relative w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl transform scale-95">
+                <img
+                  src={founder.photo}
+                  alt={founder.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-1 transition-transform duration-300 group-hover:scale-105">{founder.name}</h3>
+              <p className="text-primary font-semibold mb-4 text-lg">{founder.role}</p>
+              <div className="flex justify-center gap-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <a
+                  href={founder.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href={founder.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                >
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Management Team Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {managementTeam.map((member, index) => (
               <div key={index} className="text-center group">
