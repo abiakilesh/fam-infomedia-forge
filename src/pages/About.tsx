@@ -1,6 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import { Users, Target, Award, TrendingUp } from "lucide-react";
+import { Users, Target, Award, TrendingUp, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+
+// Import management team photos
+import manojPhoto from "@/assets/team/manoj.png";
 
 const values = [
   {
@@ -22,6 +25,17 @@ const values = [
     icon: TrendingUp,
     title: "Career Growth",
     description: "We're committed to helping you achieve your professional goals.",
+  },
+];
+
+const managementTeam = [
+  {
+    name: "Manoj Kumar",
+    role: "Founder & CEO",
+    photo: manojPhoto,
+    instagram: "https://www.instagram.com/faminfomedia",
+    twitter: "https://twitter.com/faminfomedia",
+    linkedin: "https://www.linkedin.com/company/faminfomedia",
   },
 ];
 
@@ -119,8 +133,62 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Highlight */}
+      {/* Management Team */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl font-bold text-black mb-4">Our Leadership</h2>
+            <p className="text-black/70">
+              Meet the visionary behind Fam Infomedia's success.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            {managementTeam.map((member, index) => (
+              <div key={index} className="text-center max-w-xs">
+                <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-black mb-1">{member.name}</h3>
+                <p className="text-primary font-medium mb-4">{member.role}</p>
+                <div className="flex justify-center gap-4">
+                  <a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    href={member.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Highlight */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl font-bold text-black mb-6">Our Specialized Teams</h2>
           <p className="text-black/70 mb-8 leading-relaxed">
