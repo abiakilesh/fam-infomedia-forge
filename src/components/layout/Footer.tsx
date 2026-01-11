@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, MapPinned } from "lucide-react";
+import famLogo from "@/assets/fam-logo.png";
 
 const Footer = () => {
   return (
@@ -9,29 +10,26 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">F</span>
-              </div>
-              <span className="font-display font-semibold text-lg text-white">Fam Infomedia</span>
+              <img src={famLogo} alt="Fam Infomedia" className="h-12 w-auto" />
             </div>
             <p className="text-sm text-white/70">
               Empowering careers through comprehensive digital marketing education. 
               Join 300+ successful clients who trust us.
             </p>
             <div className="flex items-center space-x-4 pt-2">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/faminfomedia" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/faminfomedia" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/faminfomedia" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+              <a href="https://twitter.com/faminfomedia" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://business.google.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+              <a href="https://g.page/faminfomedia" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
                 <MapPinned className="h-5 w-5" />
               </a>
             </div>
