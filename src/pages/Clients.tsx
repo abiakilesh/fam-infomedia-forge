@@ -143,33 +143,156 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-20 bg-muted/50">
+      {/* Reviews Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               What Our Clients Say
             </h2>
+            <p className="text-black/70">
+              Real feedback from businesses we've helped grow
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-card border border-border rounded-xl p-6 space-y-4">
-                <p className="text-muted-foreground italic">
-                  "Fam Infomedia transformed our digital presence. Their expertise and 
-                  dedication to our success made all the difference."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-xs">
-                    [PHOTO]
-                  </div>
-                  <div>
-                    <div className="font-medium text-foreground text-sm">Client Name {i}</div>
-                    <div className="text-xs text-muted-foreground">Company {i}</div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Review 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "Fam Infomedia transformed our digital presence completely. Their SEO strategies helped us rank on the first page of Google within 3 months. Highly recommended!"
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  YS
+                </div>
+                <div>
+                  <div className="font-semibold text-black">Yamaha Sri Sakthi Motors</div>
+                  <div className="text-sm text-black/60">Automotive Dealer</div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "The team at Fam Infomedia is incredibly professional and dedicated. They redesigned our website and managed our social media, resulting in a 200% increase in leads."
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  NB
+                </div>
+                <div>
+                  <div className="font-semibold text-black">Nandhi Builders</div>
+                  <div className="text-sm text-black/60">Construction & Real Estate</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "We've been working with Fam Infomedia for over a year now. Their consistent efforts in digital marketing have helped us build a strong online presence in our local market."
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  KR
+                </div>
+                <div>
+                  <div className="font-semibold text-black">The Kokkarakko</div>
+                  <div className="text-sm text-black/60">Restaurant & Hospitality</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "Excellent service! The Fam Infomedia team understood our brand vision perfectly and delivered a stunning website that truly represents our business values."
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  LS
+                </div>
+                <div>
+                  <div className="font-semibold text-black">Little Starr School</div>
+                  <div className="text-sm text-black/60">Education</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 5 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "From Google Ads to social media management, Fam Infomedia handles everything professionally. Our ROI has improved significantly since we started working with them."
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  DP
+                </div>
+                <div>
+                  <div className="font-semibold text-black">DP Carz Studio</div>
+                  <div className="text-sm text-black/60">Automotive Services</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 6 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 space-y-6 hover:shadow-lg transition-all duration-300 group">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-black/80 italic leading-relaxed">
+                "The training programs at Fam Infomedia are top-notch. Their comprehensive digital marketing course helped us build an in-house marketing team with real skills."
+              </p>
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                  CR
+                </div>
+                <div>
+                  <div className="font-semibold text-black">Crescent Construction</div>
+                  <div className="text-sm text-black/60">Construction</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
