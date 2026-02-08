@@ -3,6 +3,9 @@ import Layout from "@/components/layout/Layout";
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Manager photo
+import gmPhoto from "@/assets/team/gm.png";
+
 // Team member photos
 import prasanaPhoto from "@/assets/team/prasana.png";
 import vigneshPhoto from "@/assets/team/vignesh.png";
@@ -29,6 +32,14 @@ import gokulPhoto from "@/assets/team/gokul.png";
 import hemaPhoto from "@/assets/team/hema.png";
 import kishorePhoto from "@/assets/team/kishore.png";
 import manojPhoto from "@/assets/team/manoj.png";
+
+// Team Head photos
+import head1Photo from "@/assets/team/head1.png";
+import head2Photo from "@/assets/team/head2.png";
+import head3Photo from "@/assets/team/head3.png";
+import teamlead1Photo from "@/assets/team/teamlead1.png";
+import teamlead2Photo from "@/assets/team/teamlead2.png";
+
 // Team F members
 import memberF1Photo from "@/assets/team/member-f1.png";
 import memberF2Photo from "@/assets/team/member-f2.png";
@@ -51,15 +62,28 @@ interface TeamMember {
 interface Team {
   id: string;
   name: string;
-  description: string;
+  headName: string;
+  headRole: string;
+  headPhoto: string;
   members: TeamMember[];
 }
+
+const manager = {
+  name: "Prasanth",
+  role: "General Manager",
+  photo: gmPhoto,
+  instagram: "https://www.instagram.com/faminfomedia",
+  twitter: "https://twitter.com/faminfomedia",
+  linkedin: "https://www.linkedin.com/company/faminfomedia",
+};
 
 const teamsData: Team[] = [
   {
     id: "team-a",
     name: "Team A - Digital Strategy",
-    description: "Our digital strategy team develops comprehensive marketing plans and campaign strategies.",
+    headName: "Priya",
+    headRole: "Head - Operations",
+    headPhoto: head1Photo,
     members: [
       { id: "a1", name: "Prasana", role: "Strategy Lead", photo: prasanaPhoto, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "a2", name: "Vignesh", role: "Campaign Manager", photo: vigneshPhoto, linkedin: "#", instagram: "#" },
@@ -71,7 +95,9 @@ const teamsData: Team[] = [
   {
     id: "team-b",
     name: "Team B - Content & SEO",
-    description: "Specialists in content creation, SEO optimization, and organic growth strategies.",
+    headName: "Divya",
+    headRole: "Head - Marketing",
+    headPhoto: head2Photo,
     members: [
       { id: "b1", name: "Santhosh", role: "SEO Lead", photo: santhoshPhoto, linkedin: "#", twitter: "#" },
       { id: "b2", name: "Karthiga", role: "Content Writer", photo: karthigaPhoto, linkedin: "#", instagram: "#" },
@@ -83,7 +109,9 @@ const teamsData: Team[] = [
   {
     id: "team-c",
     name: "Team C - Design",
-    description: "Creative designers crafting stunning visuals and brand identities.",
+    headName: "Keerthana",
+    headRole: "Head - HR",
+    headPhoto: head3Photo,
     members: [
       { id: "c1", name: "Akilesh", role: "Creative Lead", photo: akileshPhoto, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "c2", name: "Bharath", role: "Graphic Designer", photo: bharathPhoto, linkedin: "#", instagram: "#" },
@@ -101,7 +129,9 @@ const teamsData: Team[] = [
   {
     id: "team-d",
     name: "Team D - Social Media",
-    description: "Social media experts managing engagement and community growth.",
+    headName: "Karthik",
+    headRole: "Team Lead - Design",
+    headPhoto: teamlead1Photo,
     members: [
       { id: "d1", name: "Subhiksha", role: "Social Media Lead", photo: subhikshaPhoto, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "d2", name: "Santhiya", role: "Community Manager", photo: santhiyaPhoto, linkedin: "#", instagram: "#" },
@@ -110,7 +140,9 @@ const teamsData: Team[] = [
   {
     id: "team-e",
     name: "Team E - Development",
-    description: "Technical experts building digital solutions and web applications.",
+    headName: "Santhiya",
+    headRole: "Team Lead - Content",
+    headPhoto: teamlead2Photo,
     members: [
       { id: "e1", name: "Naveen", role: "Tech Lead", photo: naveenPhoto, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "e2", name: "Kathir", role: "Full Stack Developer", photo: kathirPhoto, linkedin: "#", instagram: "#" },
@@ -119,7 +151,9 @@ const teamsData: Team[] = [
   {
     id: "team-f",
     name: "Team F - Operations",
-    description: "Operations team ensuring smooth delivery and client success.",
+    headName: "",
+    headRole: "",
+    headPhoto: "",
     members: [
       { id: "f1", name: "Kavitha", role: "Operations Lead", photo: memberF1Photo, linkedin: "#", twitter: "#", instagram: "#" },
       { id: "f2", name: "Ranjith", role: "Project Coordinator", photo: memberF2Photo, linkedin: "#", instagram: "#" },
@@ -149,9 +183,38 @@ const Team = () => {
               Meet Our Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A talented group of professionals dedicated to your success. 
-              Click on any team to meet the members.
+              A talented group of professionals dedicated to your success.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Manager Featured Section */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto text-center">
+            <div className="group">
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl transform scale-95">
+                <img
+                  src={manager.photo}
+                  alt={manager.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-1 transition-transform duration-300 group-hover:scale-105">{manager.name}</h3>
+              <p className="text-primary font-semibold mb-4 text-lg">{manager.role}</p>
+              <div className="flex justify-center gap-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                <a href={manager.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href={manager.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href={manager.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,25 +225,35 @@ const Team = () => {
           <div className="space-y-12 max-w-6xl mx-auto">
             {teamsData.map((team) => (
               <div key={team.id} className="space-y-6">
-                {/* Team Header */}
+                {/* Team Header with Head */}
                 <div 
                   className="cursor-pointer group"
                   onClick={() => toggleTeam(team.id)}
                 >
                   <Card className="bg-gray-800 hover:shadow-lg transition-all duration-300 border-gray-700">
                     <CardContent className="p-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {team.name}
-                      </h3>
-                      <p className="text-gray-300 mb-2">{team.description}</p>
-                      <p className="text-sm text-primary font-medium">
-                        {expandedTeam === team.id ? "Click to collapse" : "Click to view members →"}
-                      </p>
+                      <div className="flex items-center gap-6">
+                        {/* Team Head Photo */}
+                        {team.headPhoto && (
+                          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/40 flex-shrink-0">
+                            <img src={team.headPhoto} alt={team.headName} className="w-full h-full object-cover" />
+                          </div>
+                        )}
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-white mb-1">{team.name}</h3>
+                          {team.headName && (
+                            <p className="text-primary font-medium text-sm">Head: {team.headName} — {team.headRole}</p>
+                          )}
+                          <p className="text-sm text-gray-400 mt-1">
+                            {expandedTeam === team.id ? "Click to collapse" : `${team.members.length} members · Click to view →`}
+                          </p>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
 
-                {/* Expanded Members with Zoom Animation */}
+                {/* Expanded Members */}
                 {expandedTeam === team.id && (
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {team.members.map((member, index) => (
@@ -191,7 +264,6 @@ const Team = () => {
                       >
                         <Card className="overflow-hidden bg-gray-800 hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-gray-700">
                           <CardContent className="p-0">
-                            {/* Member Photo */}
                             <div className="relative overflow-hidden">
                               <img 
                                 src={member.photo} 
@@ -199,38 +271,22 @@ const Team = () => {
                                 className="w-full h-56 object-cover object-top transition-transform duration-500 hover:scale-110"
                               />
                             </div>
-                            
-                            {/* Member Info */}
                             <div className="p-4 space-y-2 text-center">
                               <h4 className="font-semibold text-white text-lg">{member.name}</h4>
                               <p className="text-sm text-gray-400">{member.role}</p>
-                              
-                              {/* Social Links */}
                               <div className="flex justify-center gap-3 pt-2">
                                 {member.linkedin && (
-                                  <a 
-                                    href={member.linkedin} 
-                                    className="text-gray-400 hover:text-primary transition-colors"
-                                    onClick={(e) => e.stopPropagation()}
-                                  >
+                                  <a href={member.linkedin} className="text-gray-400 hover:text-primary transition-colors" onClick={(e) => e.stopPropagation()}>
                                     <Linkedin className="h-5 w-5" />
                                   </a>
                                 )}
                                 {member.twitter && (
-                                  <a 
-                                    href={member.twitter} 
-                                    className="text-gray-400 hover:text-primary transition-colors"
-                                    onClick={(e) => e.stopPropagation()}
-                                  >
+                                  <a href={member.twitter} className="text-gray-400 hover:text-primary transition-colors" onClick={(e) => e.stopPropagation()}>
                                     <Twitter className="h-5 w-5" />
                                   </a>
                                 )}
                                 {member.instagram && (
-                                  <a 
-                                    href={member.instagram} 
-                                    className="text-gray-400 hover:text-primary transition-colors"
-                                    onClick={(e) => e.stopPropagation()}
-                                  >
+                                  <a href={member.instagram} className="text-gray-400 hover:text-primary transition-colors" onClick={(e) => e.stopPropagation()}>
                                     <Instagram className="h-5 w-5" />
                                   </a>
                                 )}

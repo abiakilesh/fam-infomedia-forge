@@ -2,16 +2,8 @@ import Layout from "@/components/layout/Layout";
 import { Users, Target, Award, TrendingUp, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Import management team photos
 import dineshPhoto from "@/assets/team/dinesh.png";
-import head1Photo from "@/assets/team/head1.png";
-import head2Photo from "@/assets/team/head2.png";
-import head3Photo from "@/assets/team/head3.png";
-import teamlead1Photo from "@/assets/team/teamlead1.png";
-import teamlead2Photo from "@/assets/team/teamlead2.png";
-import gmPhoto from "@/assets/team/gm.png";
 
-// Founder data
 const founder = {
   name: "Dinesh Kumar",
   role: "Founder & CEO",
@@ -41,57 +33,6 @@ const values = [
     icon: TrendingUp,
     title: "Career Growth",
     description: "We're committed to helping you achieve your professional goals.",
-  },
-];
-
-const managementTeam = [
-  {
-    name: "Priya",
-    role: "Head - Operations",
-    photo: head1Photo,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
-  },
-  {
-    name: "Divya",
-    role: "Head - Marketing",
-    photo: head2Photo,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
-  },
-  {
-    name: "Keerthana",
-    role: "Head - HR",
-    photo: head3Photo,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
-  },
-  {
-    name: "Karthik",
-    role: "Team Lead - Design",
-    photo: teamlead1Photo,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
-  },
-  {
-    name: "Santhiya",
-    role: "Team Lead - Content",
-    photo: teamlead2Photo,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
-  },
-  {
-    name: "Prasanth",
-    role: "General Manager",
-    photo: gmPhoto,
-    instagram: "https://www.instagram.com/faminfomedia",
-    twitter: "https://twitter.com/faminfomedia",
-    linkedin: "https://www.linkedin.com/company/faminfomedia",
   },
 ];
 
@@ -189,18 +130,18 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* Leadership Section - Founder Only */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">Our Leadership</h2>
             <p className="text-black/70">
-              Meet the talented leaders driving Fam Infomedia's success.
+              Meet the visionary leader driving Fam Infomedia's success.
             </p>
           </div>
 
           {/* Founder - Featured Section */}
-          <div className="max-w-md mx-auto mb-16">
+          <div className="max-w-md mx-auto">
             <div className="text-center group">
               <div className="relative w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl transform scale-95">
                 <img
@@ -239,49 +180,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
-          {/* Management Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {managementTeam.map((member, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-xl transform scale-95">
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-black mb-1 transition-transform duration-300 group-hover:scale-105">{member.name}</h3>
-                <p className="text-primary font-medium mb-4 text-sm">{member.role}</p>
-                <div className="flex justify-center gap-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={member.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                    <Instagram className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                    <Twitter className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-black/60 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -316,12 +214,9 @@ const About = () => {
           </h2>
           
           <div className="relative max-w-4xl mx-auto">
-            {/* Vertical line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/30" />
             
-            {/* Milestones */}
             <div className="space-y-12">
-              {/* 2022 - Left */}
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
@@ -335,7 +230,6 @@ const About = () => {
                 <div className="w-1/2" />
               </div>
 
-              {/* 2022 - Right */}
               <div className="relative flex items-center">
                 <div className="w-1/2" />
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white" />
@@ -349,7 +243,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* 2023 - Left */}
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
@@ -363,7 +256,6 @@ const About = () => {
                 <div className="w-1/2" />
               </div>
 
-              {/* 2023 - Right */}
               <div className="relative flex items-center">
                 <div className="w-1/2" />
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white" />
@@ -377,7 +269,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* 2024 - Left */}
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
@@ -391,7 +282,6 @@ const About = () => {
                 <div className="w-1/2" />
               </div>
 
-              {/* 2024 - Right */}
               <div className="relative flex items-center">
                 <div className="w-1/2" />
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white" />
