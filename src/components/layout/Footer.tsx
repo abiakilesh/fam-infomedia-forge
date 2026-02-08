@@ -80,7 +80,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/60">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/60 space-y-2">
+          <p className="font-semibold text-white/80">Fam Infomedia, Tirupur</p>
+          <p className="text-white/50 italic">(A group of Fethersinfo Pvt. Ltd.,)</p>
           <p>&copy; {new Date().getFullYear()} Fam Infomedia. All rights reserved.</p>
         </div>
       </div>
