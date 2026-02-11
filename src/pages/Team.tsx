@@ -153,7 +153,7 @@ const Team = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="group">
             <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:border-primary">
-              <img src={manager.photo} alt={manager.name} className="w-full h-full object-cover" />
+              <img src={manager.photo} alt={manager.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <h3 className="text-2xl font-bold text-white">{manager.name}</h3>
             <p className="text-primary font-semibold text-lg mb-4">{manager.role}</p>
@@ -174,14 +174,18 @@ const Team = () => {
 
       {/* Teams */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4 space-y-16 max-w-6xl">
+        <div className="container mx-auto px-4 space-y-20 max-w-6xl">
           {teamsData.map((team, idx) => (
             <div key={idx} className="space-y-8">
-              {/* Team Head + Team Name */}
-              <div className="text-center">
+              {/* Team Head - slide down effect + large image + zoom on hover */}
+              <div className="text-center animate-fade-in-up" style={{ animationDelay: `${idx * 100}ms` }}>
                 {team.headPhoto && (
-                  <div className="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-3 border-primary/40 shadow-lg">
-                    <img src={team.headPhoto} alt={team.headName} className="w-full h-full object-cover" />
+                  <div className="group w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/40 shadow-2xl cursor-pointer transition-all duration-500 hover:shadow-primary/30 hover:shadow-2xl">
+                    <img
+                      src={team.headPhoto}
+                      alt={team.headName}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
+                    />
                   </div>
                 )}
                 <h2 className="text-2xl font-bold text-white">{team.name}</h2>
@@ -190,12 +194,20 @@ const Team = () => {
                 )}
               </div>
 
-              {/* Team Members - simple image grid */}
-              <div className="flex flex-wrap justify-center gap-6">
+              {/* Team Members - fade in visible + medium image + zoom on hover */}
+              <div className="flex flex-wrap justify-center gap-8">
                 {team.members.map((member, mIdx) => (
-                  <div key={mIdx} className="text-center w-28">
-                    <div className="w-20 h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-gray-700 hover:border-primary transition-colors duration-300">
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  <div
+                    key={mIdx}
+                    className="text-center w-32 opacity-0 animate-fade-in-up"
+                    style={{ animationDelay: `${(idx * 100) + (mIdx * 120) + 200}ms` }}
+                  >
+                    <div className="group w-28 h-28 mx-auto mb-3 rounded-full overflow-hidden border-2 border-gray-700 shadow-lg cursor-pointer transition-all duration-500 hover:border-primary hover:shadow-primary/20 hover:shadow-xl">
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
+                      />
                     </div>
                     <p className="text-sm text-gray-300 font-medium">{member.name}</p>
                   </div>
