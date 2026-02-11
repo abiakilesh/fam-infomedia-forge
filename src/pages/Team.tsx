@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 
 // Manager photo
 import gmPhoto from "@/assets/team/gm.png";
@@ -54,84 +54,110 @@ const manager = {
   instagram: "https://www.instagram.com/faminfomedia",
   twitter: "https://twitter.com/faminfomedia",
   linkedin: "https://www.linkedin.com/company/faminfomedia",
+  facebook: "https://www.facebook.com/faminfomedia",
 };
 
 const teamsData = [
   {
     name: "Team A - Digital Strategy",
     headName: "Priya",
+    headRole: "Head - Operations",
     headPhoto: head1Photo,
     members: [
-      { name: "Prasana", photo: prasanaPhoto },
-      { name: "Vignesh", photo: vigneshPhoto },
-      { name: "Dhileepkumar", photo: dhileepkumarPhoto },
-      { name: "Jessy", photo: jessyPhoto },
-      { name: "Karthika", photo: karthikaPhoto },
+      { name: "Prasana", role: "Strategy Lead", photo: prasanaPhoto },
+      { name: "Vignesh", role: "Campaign Manager", photo: vigneshPhoto },
+      { name: "Dhileepkumar", role: "Marketing Analyst", photo: dhileepkumarPhoto },
+      { name: "Jessy", role: "Digital Strategist", photo: jessyPhoto },
+      { name: "Karthika", role: "Project Lead", photo: karthikaPhoto },
     ],
   },
   {
     name: "Team B - Content & SEO",
     headName: "Divya",
+    headRole: "Head - Marketing",
     headPhoto: head2Photo,
     members: [
-      { name: "Santhosh", photo: santhoshPhoto },
-      { name: "Karthiga", photo: karthigaPhoto },
-      { name: "Keerthana", photo: keerthanaPhoto },
-      { name: "Lebina", photo: lebinaPhoto },
-      { name: "Priya", photo: priyaPhoto },
+      { name: "Santhosh", role: "SEO Lead", photo: santhoshPhoto },
+      { name: "Karthiga", role: "Content Writer", photo: karthigaPhoto },
+      { name: "Keerthana", role: "Content Strategist", photo: keerthanaPhoto },
+      { name: "Lebina", role: "SEO Specialist", photo: lebinaPhoto },
+      { name: "Priya", role: "Content Manager", photo: priyaPhoto },
     ],
   },
   {
     name: "Team C - Design",
     headName: "Keerthana",
+    headRole: "Head - HR",
     headPhoto: head3Photo,
     members: [
-      { name: "Akilesh", photo: akileshPhoto },
-      { name: "Bharath", photo: bharathPhoto },
-      { name: "Gayathri", photo: gayathriPhoto },
-      { name: "Hari", photo: hariPhoto },
-      { name: "Sharnitha", photo: sharnithaPhoto },
-      { name: "Vaishu", photo: vaishuPhoto },
-      { name: "Dharshan", photo: dharshanPhoto },
-      { name: "Gokul", photo: gokulPhoto },
-      { name: "Hema", photo: hemaPhoto },
-      { name: "Kishore", photo: kishorePhoto },
-      { name: "Manoj", photo: manojPhoto },
+      { name: "Akilesh", role: "Creative Lead", photo: akileshPhoto },
+      { name: "Bharath", role: "Graphic Designer", photo: bharathPhoto },
+      { name: "Gayathri", role: "UI/UX Designer", photo: gayathriPhoto },
+      { name: "Hari", role: "Motion Designer", photo: hariPhoto },
+      { name: "Sharnitha", role: "Brand Designer", photo: sharnithaPhoto },
+      { name: "Vaishu", role: "Visual Designer", photo: vaishuPhoto },
+      { name: "Dharshan", role: "Graphic Designer", photo: dharshanPhoto },
+      { name: "Gokul", role: "UI Designer", photo: gokulPhoto },
+      { name: "Hema", role: "Brand Designer", photo: hemaPhoto },
+      { name: "Kishore", role: "Creative Designer", photo: kishorePhoto },
+      { name: "Manoj", role: "Art Director", photo: manojPhoto },
     ],
   },
   {
     name: "Team D - Social Media",
     headName: "Karthik",
+    headRole: "Team Lead - Design",
     headPhoto: teamlead1Photo,
     members: [
-      { name: "Subhiksha", photo: subhikshaPhoto },
-      { name: "Santhiya", photo: santhiyaPhoto },
+      { name: "Subhiksha", role: "Social Media Lead", photo: subhikshaPhoto },
+      { name: "Santhiya", role: "Community Manager", photo: santhiyaPhoto },
     ],
   },
   {
     name: "Team E - Development",
     headName: "Santhiya",
+    headRole: "Team Lead - Content",
     headPhoto: teamlead2Photo,
     members: [
-      { name: "Naveen", photo: naveenPhoto },
-      { name: "Kathir", photo: kathirPhoto },
+      { name: "Naveen", role: "Tech Lead", photo: naveenPhoto },
+      { name: "Kathir", role: "Full Stack Developer", photo: kathirPhoto },
     ],
   },
   {
     name: "Team F - Operations",
     headName: "",
+    headRole: "",
     headPhoto: "",
     members: [
-      { name: "Kavitha", photo: memberF1Photo },
-      { name: "Ranjith", photo: memberF2Photo },
-      { name: "Arun", photo: memberF3Photo },
-      { name: "Divya", photo: memberF4Photo },
-      { name: "Vijay", photo: memberF5Photo },
-      { name: "Kiran", photo: memberF6Photo },
-      { name: "Surya", photo: memberF7Photo },
+      { name: "Kavitha", role: "Operations Lead", photo: memberF1Photo },
+      { name: "Ranjith", role: "Project Coordinator", photo: memberF2Photo },
+      { name: "Arun", role: "Client Success Manager", photo: memberF3Photo },
+      { name: "Divya", role: "Quality Analyst", photo: memberF4Photo },
+      { name: "Vijay", role: "Process Manager", photo: memberF5Photo },
+      { name: "Kiran", role: "Operations Executive", photo: memberF6Photo },
+      { name: "Surya", role: "Technical Support", photo: memberF7Photo },
     ],
   },
 ];
+
+const SocialLinks = ({ small = false }: { small?: boolean }) => {
+  const size = small ? "w-8 h-8" : "w-10 h-10";
+  const iconSize = small ? "h-4 w-4" : "h-5 w-5";
+  const bg = "bg-gray-800";
+  return (
+    <div className="flex justify-center gap-3">
+      <a href="https://www.facebook.com/faminfomedia" target="_blank" rel="noopener noreferrer" className={`${size} rounded-full ${bg} flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300`}>
+        <Facebook className={iconSize} />
+      </a>
+      <a href="https://www.instagram.com/faminfomedia" target="_blank" rel="noopener noreferrer" className={`${size} rounded-full ${bg} flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300`}>
+        <Instagram className={iconSize} />
+      </a>
+      <a href="https://twitter.com/faminfomedia" target="_blank" rel="noopener noreferrer" className={`${size} rounded-full ${bg} flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300`}>
+        <Twitter className={iconSize} />
+      </a>
+    </div>
+  );
+};
 
 const Team = () => {
   return (
@@ -152,12 +178,15 @@ const Team = () => {
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4 text-center">
           <div className="group">
-            <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:border-primary">
+            <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl">
               <img src={manager.photo} alt={manager.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <h3 className="text-2xl font-bold text-white">{manager.name}</h3>
             <p className="text-primary font-semibold text-lg mb-4">{manager.role}</p>
             <div className="flex justify-center gap-4">
+              <a href={manager.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
+                <Facebook className="h-5 w-5" />
+              </a>
               <a href={manager.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all">
                 <Instagram className="h-5 w-5" />
               </a>
@@ -174,42 +203,51 @@ const Team = () => {
 
       {/* Teams */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4 space-y-20 max-w-6xl">
+        <div className="container mx-auto px-4 space-y-24 max-w-6xl">
           {teamsData.map((team, idx) => (
-            <div key={idx} className="space-y-8">
-              {/* Team Head - slide down effect + large image + zoom on hover */}
+            <div key={idx} className="space-y-10">
+              {/* Team Head - manager-style round, large, with slide-down + zoom hover */}
               <div className="text-center animate-fade-in-up" style={{ animationDelay: `${idx * 100}ms` }}>
                 {team.headPhoto && (
-                  <div className="group w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/40 shadow-2xl cursor-pointer transition-all duration-500 hover:shadow-primary/30 hover:shadow-2xl">
+                  <div className="group w-44 h-44 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl cursor-pointer transition-all duration-500 hover:scale-110 hover:border-primary hover:shadow-2xl">
                     <img
                       src={team.headPhoto}
                       alt={team.headName}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 )}
                 <h2 className="text-2xl font-bold text-white">{team.name}</h2>
                 {team.headName && (
-                  <p className="text-primary text-sm font-medium mt-1">Team Head: {team.headName}</p>
+                  <>
+                    <p className="text-white text-lg font-semibold mt-2">{team.headName}</p>
+                    <p className="text-primary text-sm font-medium">{team.headRole}</p>
+                  </>
                 )}
+                {team.headPhoto && <div className="mt-3"><SocialLinks /></div>}
               </div>
 
-              {/* Team Members - fade in visible + medium image + zoom on hover */}
+              {/* Team Members - square shape, medium, invisible-to-visible, zoom hover */}
               <div className="flex flex-wrap justify-center gap-8">
                 {team.members.map((member, mIdx) => (
                   <div
                     key={mIdx}
-                    className="text-center w-32 opacity-0 animate-fade-in-up"
+                    className="text-center w-40 opacity-0 animate-fade-in-up"
                     style={{ animationDelay: `${(idx * 100) + (mIdx * 120) + 200}ms` }}
                   >
-                    <div className="group w-28 h-28 mx-auto mb-3 rounded-full overflow-hidden border-2 border-gray-700 shadow-lg cursor-pointer transition-all duration-500 hover:border-primary hover:shadow-primary/20 hover:shadow-xl">
+                    <div className="group w-36 h-36 mx-auto mb-3 rounded-xl overflow-hidden border-2 border-gray-700 shadow-lg cursor-pointer transition-all duration-500 hover:border-primary hover:shadow-primary/20 hover:shadow-xl hover:scale-105">
                       <img
                         src={member.photo}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-115"
+                        style={{ transform: "scale(1)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.15)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                       />
                     </div>
-                    <p className="text-sm text-gray-300 font-medium">{member.name}</p>
+                    <p className="text-white font-semibold text-sm">{member.name}</p>
+                    <p className="text-primary/80 text-xs mt-0.5">{member.role}</p>
+                    <div className="mt-2"><SocialLinks small /></div>
                   </div>
                 ))}
               </div>
